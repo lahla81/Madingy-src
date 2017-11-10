@@ -1,0 +1,30 @@
+@import './old-style.css';
+.custom-btn-primary {
+    background-color: transparent;
+    color: #f8ad47;
+    border-color: #f8ad47;
+}
+.custom-btn-primary:hover,
+.custom-btn-primary:focus,
+.custom-btn-primary:active,
+.custom-btn-primary:active:hover,
+.custom-btn-primary:active:focus {
+    color: #ab7731;
+    border-color: #ab7731;
+    background-color: transparent;
+}
+
+.custom-btn-primary2 {
+    background-color: #f8ad47;
+    color: white;
+    border-color: #f8ad47;
+}
+.custom-btn-primary2:hover,
+.custom-btn-primary2:focus,
+.custom-btn-primary2:active,
+.custom-btn-primary2:active:hover,
+.custom-btn-primary2:active:focus {
+    background-color: #ab7731;
+    color: white;
+    border-color: #ab7731;
+}

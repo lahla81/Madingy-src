@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/font-awesome.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>
+            مصري.كوم | الدفع
+        </title>
+    </head>
+    <body>
+<div class="container-fluid">
+    <!-- بداية الشريط العلوي -->
+    <div class="row">
+            <div class="navbar navbar-default custom-navbar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="btn btn-default custom-btn navbar-toggle collapsed" data-toggle='collapse' data-target='#navbar-collapse-menu'>
+                                <i class="fa fa-bars fa-lg"></i>
+                        </button>
+                        <a href='checkout.html' class="btn btn-default custom-btn navbar-toggle">
+                            <i class="fa fa-shopping-cart fa-lg"></i>
+                        </a>
+                        <a href="." class="navbar-brand">
+                             <img src="images/madngy-Logo.png" alt="متجر مدنجي">
+                        </a>
+                    </div>
+                    <div class="nav navbr-nav navbar-left">
+                        <form action="." class="navbar-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control custom-form-control" placeholder="كلمة البحث" required>
+                                <div class="input-group-btn">
+                                    <button class="hidden-xs hidden-sm btn btn-default dropdown-toggle custom-btn" data-toggle="dropdown"> اختر الفئة
+                                            <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu custom-drop-menu">
+                                        <li>
+                                            <div class="checkbox">
+                                                    <label>
+                                                      <input type="checkbox" name="search-category" value="men"> رجالي
+                                                    </label>
+                                                  </div>
+                                        </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li>
+                                                    <div class="checkbox">
+                                                            <label>
+                                                              <input type="checkbox" name="search-category" value="women"> نسائي
+                                                            </label>
+                                                          </div>
+                                        </li>   
+                                        <li role="separator" class="divider"></li>
+                                        <li>
+                                                <div class="checkbox">
+                                                        <label>
+                                                          <input type="checkbox" name="search-category" value="children"> أطفالي
+                                                        </label>
+                                                      </div>
+                                        </li>
+                                    </ul>
+                                    <button type="submit" class="btn btn-primary custom-btn custom-btn-primary">إبحث </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse-menu">
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li>
+                            <a href=".">الصفحة الرئيسية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">أقسام المتجر
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu custom-drop-menu">
+                            <li>
+                               <a href="#">رجالي</a> 
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">نسائي</a> 
+                             </li>
+                             <li role="separator" class="divider"></li>
+                             <li>
+                                <a href="#">أطفالي</a> 
+                             </li>
+                        </ul>
+                        </li>
+                        <li>
+                            <a href="search.html">البحث المتقدم</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">تواصل معنا</a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="checkout.html" id="ptn-shopping-cart" title="عربة الشراء" data-toggle="tooltip" data-placement="bottom" class="btn btn-default navbar-btn">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+    </div><!-- نهاية الشريط العلوي -->
+
+    <div class="row">
+        <form action="payment.html" id="form-checkout">
+        <div class="container">
+            <ol class="breadcrumb custom-breadcrumb">
+                <li><a href=".">الصفحة الرئيسية</a></li>
+                <li><a href="checkout.html">عربة الشراء</a></li>
+                <li class="active">الدفع</li>
+            </ol>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="custom-heading">البيانات الشخصية</h3>
+                    <div class="col-sm-6 form-group">
+                        <input type="text" name="first-name" placeholder="الإسم الأول" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                            <input type="text" name="last-name" placeholder="الإسم الأخير" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                            <input type="text" name="email" placeholder="البريد الإلكتروني" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                            <input type="text" name="area" placeholder="المنطقة" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <select name="country" placeholder="المنطقة" required class="form-control custom-form-control input-lg custom-input-lg">
+                            <option value="" selected disabled>اختر الدولة</option>
+                            <option value="Sa">السعودية</option>
+                            <option value="Eg">مصر</option>
+                            <option value="Jo">الأردن</option>
+                            <option value="Sy">سوريا</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <select name="city" placeholder="المنطقة" required class="form-control custom-form-control input-lg custom-input-lg">
+                            <option value="" selected disabled>اختر المدينة</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input type="text" name="phone" placeholder="رقم الموبيل" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input type="text" name="adress1" placeholder="العنوان الثاني" required class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input type="text" name="adress2" placeholder="العنوان الثاني(اختياري)" class="form-control custom-form-control input-lg custom-input-lg">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h3 class="custom-heading">بيانات الدفع</h3>
+                    <div class="col-sm-6">
+                        <label>
+                            <input type="radio" name="payment_method" value="credit_card" checked>
+                            الدفع بالبطاقة الإئتمانية
+                        </label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>
+                            <input type="radio" name="payment_method" value="on_delivery">
+                            الدفع عند الإستلام
+                        </label>
+                    </div>
+                    <div class="col-xs-12" id="credit_card_info">
+                        <div class="col-sm-6 form-group">
+                            <input type="text" name="credit_card_no" placeholder="رقم البطاقة الإئتمانية" required class="form-control custom-form-control input-lg custom-input-lg">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input type="number" name="expired_month"  placeholder="شهر الإنتهاء" min="1" max="12" required class="form-control custom-form-control input-lg custom-input-lg">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input type="number" name="expierd_year" placeholder="سنة الإنتهاء" min="2017" max="2030" required class="form-control custom-form-control input-lg custom-input-lg">
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input type="number" name="cvv" placeholder="CVV" min="100" max="999" required class="form-control custom-form-control input-lg custom-input-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- بداية جدول المنتجات داخل العربة وكمياتها وأسعارها -->
+            <div class="col-xs-12">
+                    <h1 class="custom-heading">طلبك</h1>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>المنتج</th>
+                                <th>السعر</th>
+                                <th>العدد المطلوب</th>
+                                <th>اجمالي السعر</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-product-info data-product-price="400">
+                                <td>
+                                    <div class="media custom-media">
+                                        <div class="media-left">
+                                            <img src="images/lacoste_1.jpg" alt="تي شيرت رجالي من لاكوست" class="media-opject hidden-xs">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>تي شيرت رجالي من لاكوست</h4>
+                                            <div class="text-muted custom-text-muted">ملابس رجالي</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    400$
+                                </td>
+                                <td>
+                                    <input name="product[0]" type="hidden" value="تيشرت رجالي من لاكوست">
+                                    <select data-product-quantity action="quantity[0]" class="form-control custom-form-control select-inline">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3" selected>3</option>
+                                    </select>
+                                </td>
+                                <td class="total-price-for-product hidden-xs">
+                                    1200$
+                                </td>
+                                <td>
+                                    <button data-remove-from-cart class="btn btn-danger custom-btn-danger">
+                                       <span class="hidden-xs">حذف</span> 
+                                       <i class="fa fa-times fa-sm visible-xs"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr data-product-info data-product-price="300">
+                                <td>
+                                    <div class="media custom-media">
+                                        <div class="media-left">
+                                            <img src="images/adidas_1.jpg" alt="تي شيرت أديدس" class="media-opject hidden-xs">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>تي شيرت أديدس</h4>
+                                            <div class="text-muted custom-text-muted">ملابس رجالي</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    300$
+                                </td>
+                                <td>
+                                    <input name="product[1]" type="hidden" value="تيشرت أديدس">
+                                    <select data-product-quantity action="quantity[1]" class="form-control custom-form-control select-inline">
+                                        <option value="1"selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </td>
+                                <td class="total-price-for-product hidden-xs">
+                                    300$
+                                </td>
+                                <td>
+                                    <button data-remove-from-cart class="btn btn-danger custom-btn-danger">
+                                            <span class="hidden-xs">حذف</span> 
+                                            <i class="fa fa-times fa-sm visible-xs"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" >
+                                    <span class="text-muted custom-text-muted">السعر الإجمالي للمنتجات</span>
+                                    <span id="total-price-for-all-products">1500$</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button type="submit" class="btn btn-primary custom-btn custom-btn-primary2 custom-btn-icon btn-lg">
+                            <div class="clearfix">
+                                <div class="pull-left">إكمال عملية الشراء</div>
+                                <div class="pull-right">
+                                <i class="fa fa-usd fa-lg"></i>
+                                </div>
+                            </div>
+                        </button>
+                </form>
+            </div>   <!-- نهاية جدول المنتجات داخل العربة وكمياتها وأسعارها -->
+        </div>
+    </div>
+
+        <!-- بداية ذيل الصفحة -->
+        <div id="footer" class="row">
+            <div id="brand-logos" class="col-xs-12 text-center">
+                <span><h4>المتجر معتمد لكبري الشركات العالمية</h4></span>
+                <!-- بداية الشعارا -->
+                <div class="img-container">
+                    <img src="images/adidas.png" alt="addidas">
+                    <img src="images/polo.png" alt="polo">
+                    <img src="images/puma.png" alt="puma">
+                    <img src="images/lacoste.png" alt="lacoste">
+                </div>
+                <!-- نهاية الشعارات -->
+            </div>
+            <div id="footer-nav" class="col-xs-12 text-center">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <a href=".">
+                            <img src="images/msry.png" alt="مصري دوت كوم">
+                        </a>
+                    </div>
+                    <div id="footer-nav-links" class="col-xs-12 text-center hidden-xs">
+                        <a href=".">الصفحة الرئيسية</a>
+                        <a href="search.html">البحث المتقدم</a>
+                        <a href="contact.html">تواصل معنا</a>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                        <form action="" class="form form-inline">
+                            <label for="footer-email"><small>اشترك بالنشرة البريدية لمتايعة كل ما هو جديد</small></label>
+                            <br>
+                            <div class="input-group">
+                                <input class="form-control custom-form-control" type="email" placeholder=" البريد الإلكتروني" id="footer-email" required>
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary custom-btn custom-btn-primary2">متابعة</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </div>
+            <div class="col-xs-12" id="footer-copyright-social">
+                <div class="container">
+                    <div class="clearfix">
+                        <div id="copyright" class="pull-left">
+                                <small>
+                            جميع الحقوق محفوظة لمتجر مصري.كوم 2017
+                                </small>
+                        </div>
+                        <div id="social-icons" class="pull-right">
+                            <a href="#">
+                                <i class="fa fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter-square fa-2x"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- نهاية ذيل الصفحة -->
+</div>
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/script.js"></script>
+    </body>
+</html>
