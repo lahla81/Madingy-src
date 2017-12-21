@@ -1,0 +1,22 @@
+@mixin slider-style($color1,$color2){
+    background-color: $color1;
+    height: 2px;
+    border : none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .ui-slider-handle {
+        height: 12px;
+        width: 12px;
+        top: -6px;
+        border-radius: 50%;
+        background-color: $color2;
+        border: none;
+    }
+    .ui-slider-range {
+        background-color: $color2;
+        height: 2px;
+    }
+}
+.ui-slider {
+   @include slider-style($img-background-color,$brand-primary);
+}

@@ -1,0 +1,108 @@
+@mixin custom-btn($color){
+    color: $color;
+    border: 1px solid lighten($color, 15%);
+    box-shadow: none;
+    border-radius: 1px;
+    transition-property: background-color, border-color;
+    transition-duration: 0.5s ;
+    &:active,
+    &:focus,
+    &:active:focus {
+        outline: none;
+        background-color: white;
+    }
+}
+.custom-btn {
+   @include custom-btn($button-font-color);
+}
+.overlay .custom-btn {
+    color: #228c94;
+    font-weight: bold;
+}
+
+@mixin button-style($color){
+    background-color: transparent;
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        color: darken($color, 25%);
+        border-color: darken($color, 25%);
+        background-color: transparent;
+    }
+}
+
+.custom-btn-primary {
+    @include button-style($brand-primary);
+}
+
+.custom-btn-danger {
+    @include button-style($button-danger);
+}
+
+@mixin navbar-button-style($color) {
+    background-color: $color;
+    border-color: $color;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        background-color: darken($color, 25%);
+        border-color: darken($color, 25%);
+        color: white;
+    }
+}
+
+.custom-navbar .custom-btn-primary {
+    @include navbar-button-style($button-danger);
+}
+
+@mixin button-primary2-style ($color){
+    background-color: $color;
+    color: white;
+    border-color: $color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover,
+    &:active:focus {
+        background-color: darken($color, 25%);
+        color: white;
+        border-color: darken($color, 25%);
+    }
+
+}
+.custom-btn-primary2 {
+    @include button-primary2-style($brand-primary)
+}
+
+#btn-shopping-cart {
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+#carousel-featured .product-details .custom-btn-primary {
+    padding: 10px 25px;
+    margin-top: 15px;
+}
+
+.btn-sm {
+    border: none;
+    box-shadow: 1px 1px 2px 0px;
+}
+.custom-btn-icon {
+    padding-top:15px;
+    padding-bottom: 15px;
+    min-width: 250px;
+}

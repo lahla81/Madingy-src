@@ -1,0 +1,152 @@
+@mixin carousel-feature($color){
+    background-color: $color;
+    height: 400px;
+    padding-top: 25px;
+        
+    .custom-carousel-control.right,
+    .custom-carousel-control.left {
+        background: transparent;
+        color: darken($color, 50%);
+        i {
+            position: absolute;
+            top: calc(50% - 20px);
+        }
+    }
+    .custom-carousel-control.right >i{
+        left: 25%;
+    }
+    .custom-carousel-control.left >i {
+        right: 25%;
+     }
+    
+    .item img {
+        height: 375px;
+    }
+
+    .custom-carousel-indicators {
+            right: 69%;
+            top: 230px;
+    
+        img {
+            border: 2px solid darken($color, 15%);
+            background-color: white;
+        }
+        
+        img, img.active {
+            height: 75px;
+            width: 75px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        img.active {
+            border-color: darken($color, 40%) ;
+        }
+    }
+    .product-details{
+        border: 2px solid darken($color, 15%);
+        padding: 20px;
+        position: relative;
+        top: 50px;
+        height: 200px;
+        background-color: lighten($color, 2%);
+        border-radius: 10px;
+        h1{
+            font-size: 175%;
+            font-weight: bold;   
+        }
+        .category {
+            border: 2px solid darken($color, 15%);
+            border-radius: 10px;
+            position: absolute;
+            top:-15px;
+            right:-15px;
+            width:100px;
+            text-align: center;
+            padding: 10px;
+            background-color: $color;
+        }
+        @media (max-width: 767px){
+            height: auto;
+            position: static;
+            text-align: center;
+        }
+
+    }
+    @media (max-width: 767px){
+        height: auto;
+        .item img {
+            height: 250px;
+        }
+    }
+}
+#carousel-featured {
+    @include carousel-feature($carousel-color);
+}
+
+@mixin carousel-most-sold($color){
+    margin-top: 25px;
+    .custom-carousel-indicators {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+
+        li.active {
+            background-color: $color;
+        }
+
+        li {
+            background-color: lighten($color,30%);
+            border-radius: 0;
+        }
+        li.active,li {
+            height: 13px;
+            width: 13px;
+            margin: 2px;
+        }
+    }
+}
+#carousel-most-sold {
+    @include carousel-most-sold($most-sold-color);
+}
+
+#carousel-most-sold-sm .custom-carousel-indicators {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.feature {
+    margin-top: 25px;
+}
+
+@mixin carousel-product-image($color){
+    .item img {
+        border: 2px solid darken($color, 25%);
+        width: 100%;
+        height: 450px;
+        margin-bottom: 70px;
+    }
+    .custom-carousel-indicators-p img.active,
+    .custom-carousel-indicators-p img {
+        height: 75px;
+        width: 75px;
+        position: relative;
+        top: -20px;
+        background-color: $color;
+        cursor: pointer;
+    }
+    .custom-carousel-indicators-p img.active {
+        border-color: darken($color, 60%);
+    }
+    .custom-carousel-indicators-p img{
+        border: 2px solid darken($color, 10%);
+    }
+}
+
+#carousel-product-images {
+    @include carousel-product-image($carousel-color);
+}
+
