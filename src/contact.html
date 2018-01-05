@@ -103,7 +103,106 @@
                         <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                             <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
-
+                                    <div class="row" id="checkout-car1">
+                                        <h1>عربة الشراء</h1>
+                                        <form action="payment.html" id="form-checkout">
+                                            <table class="custom-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>المنتج</th>
+                                                        <th>السعر</th>
+                                                        <th>العدد المطلوب</th>
+                                                        <th>اجمالي السعر</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-product-info data-product-price="400">
+                                                        <td>
+                                                            <div class="media custom-media">
+                                                                <div class="media-left">
+                                                                    <img src="images/lacoste_1.jpg" alt="تي شيرت رجالي من لاكوست" class="media-opject hidden-xs">
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h4>تي شيرت رجالي من لاكوست</h4>
+                                                                    <div class="text-muted custom-text-muted">ملابس رجالي</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            400$
+                                                        </td>
+                                                        <td>
+                                                            <input name="product[0]" type="hidden" value="تيشرت رجالي من لاكوست">
+                                                            <select data-product-quantity action="quantity[0]" class="form-control custom-form-control select-inline">
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3" selected>3</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="total-price-for-product hidden-xs">
+                                                            1200$
+                                                        </td>
+                                                        <td>
+                                                            <button data-remove-from-cart class="btn btn-danger custom-btn-danger">
+                                                            <span class="hidden-xs">حذف</span> 
+                                                            <i class="fa fa-times fa-sm visible-xs"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-product-info data-product-price="300">
+                                                        <td>
+                                                            <div class="media custom-media">
+                                                                <div class="media-left">
+                                                                    <img src="images/adidas_1.jpg" alt="تي شيرت أديدس" class="media-opject hidden-xs">
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <h4>تي شيرت أديدس</h4>
+                                                                    <div class="text-muted custom-text-muted">ملابس رجالي</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            300$
+                                                        </td>
+                                                        <td>
+                                                            <input name="product[1]" type="hidden" value="تيشرت أديدس">
+                                                            <select data-product-quantity action="quantity[1]" class="form-control custom-form-control select-inline">
+                                                                <option value="1"selected>1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="total-price-for-product hidden-xs">
+                                                            300$
+                                                        </td>
+                                                        <td>
+                                                            <button data-remove-from-cart class="btn btn-danger custom-btn-danger">
+                                                                    <span class="hidden-xs">حذف</span> 
+                                                                    <i class="fa fa-times fa-sm visible-xs"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td colspan="5" >
+                                                            <span class="text-muted custom-text-muted">السعر الإجمالي للمنتجات</span>
+                                                            <span id="total-price-for-all-products">1500$</span>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                            <button type="submit" class="btn btn-primary custom-btn custom-btn-primary2 custom-btn-icon btn-lg">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">إكمال عملية الشراء</div>
+                                                        <div class="pull-right">
+                                                        <i class="fa fa-usd fa-lg"></i>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
