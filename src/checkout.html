@@ -3,11 +3,12 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+        <link id="favicon" rel="shortcut icon" href="./images/madingy.ico">
         <link rel="stylesheet" href="./css/font-awesome.css">
         <link rel="stylesheet" href="./css/bootstrap.css">
         <link rel="stylesheet" href="./css/style.css">
         <title>
-            مصري.كوم | عربة الشراء
+            مدنجي | عربة الشراء
         </title>
     </head>
     <body>
@@ -95,9 +96,16 @@
                             <a href="contact.html">تواصل معنا</a>
                         </li>
                         <li class="hidden-xs">
-                            <a href="checkout.html" id="ptn-shopping-cart" title="عربة الشراء" data-toggle="tooltip" data-placement="bottom" class="btn btn-default navbar-btn">
+                            <a href="checkout1.html" data-toggle="modal" data-target=".bs-example-modal-lg" id="btn-shopping-cart" title="عربة الشراء" data-toggle="tooltip" data-placement="bottom" class="btn btn-default navbar-btn">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
+                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     </div>
@@ -112,7 +120,7 @@
                 <li class="active">عربة الشراء</li>
             </ol>
             <!-- بداية جدول المنتجات داخل العربة وكمياتها وأسعارها -->
-            <div class="row">
+            <div class="row" id="checkout-car">
                 <h1>عربة الشراء</h1>
                 <form action="payment.html" id="form-checkout">
                     <table class="custom-table">
@@ -212,7 +220,8 @@
                         </button>
                 </form>
             </div>   <!-- نهاية جدول المنتجات داخل العربة وكمياتها وأسعارها -->
-                <!--  بدايةإقترحنا لك -->
+                
+            <!--  بدايةإقترحنا لك -->
                 <div class="row">
                     <h3 class="custom-heading heading-with-border-bottom">إقترحنا لك</h3>
                         <!-- منتج 1 -->
@@ -344,7 +353,7 @@
                 <div class="container">
                     <div class="col-xs-12">
                         <a href=".">
-                            <img src="images/msry.png" alt="مصري دوت كوم">
+                            <img src="./images/madngy-Logo1.png" alt="مدنجي">
                         </a>
                     </div>
                     <div id="footer-nav-links" class="col-xs-12 text-center hidden-xs">
@@ -371,7 +380,7 @@
                     <div class="clearfix">
                         <div id="copyright" class="pull-left">
                                 <small>
-                            جميع الحقوق محفوظة لمتجر مصري.كوم 2017
+                            جميع الحقوق محفوظة لمتجر مدنجي 2017
                                 </small>
                         </div>
                         <div id="social-icons" class="pull-right">

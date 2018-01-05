@@ -1,10 +1,10 @@
-@mixin custom-btn($color){
-    color: $color;
-    border: 1px solid lighten($color, 15%);
-    box-shadow: none;
+.custom-btn {
+    color: $button-font-color;
+    border: 1px solid lighten($button-font-color, 15%);
+    box-shadow:none;
     border-radius: 1px;
     transition-property: background-color, border-color;
-    transition-duration: 0.5s ;
+    transition-duration: 0.5s;
     &:active,
     &:focus,
     &:active:focus {
@@ -12,19 +12,18 @@
         background-color: white;
     }
 }
-.custom-btn {
-   @include custom-btn($button-font-color);
-}
+
 .overlay .custom-btn {
-    color: #228c94;
+    color: darken($brand-primary,30%);
     font-weight: bold;
 }
 
-@mixin button-style($color){
+@mixin btn-primary($color){
     background-color: transparent;
     color: $color;
     border-color: $color;
-
+    transition-property: background-color, border-color;
+    transition-duration: 0.5s;
     &:hover,
     &:focus,
     &:active,
@@ -37,21 +36,19 @@
 }
 
 .custom-btn-primary {
-    @include button-style($brand-primary);
+    @include btn-primary($brand-primary);
 }
 
 .custom-btn-danger {
-    @include button-style($button-danger);
+    @include btn-primary($button-danger);
 }
 
 @mixin navbar-button-style($color) {
     background-color: $color;
     border-color: $color;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
-
+    transition-property: background-color, border-color;
+    transition-duration: 0.5s;
     &:hover,
     &:focus,
     &:active,
@@ -64,31 +61,19 @@
 }
 
 .custom-navbar .custom-btn-primary {
-    @include navbar-button-style($button-danger);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    @include navbar-button-style($brand-primary);
 }
 
-@mixin button-primary2-style ($color){
-    background-color: $color;
-    color: white;
-    border-color: $color;
 
-    &:hover,
-    &:focus,
-    &:active,
-    &:active:hover,
-    &:active:focus {
-        background-color: darken($color, 25%);
-        color: white;
-        border-color: darken($color, 25%);
-    }
-
-}
 .custom-btn-primary2 {
-    @include button-primary2-style($brand-primary)
+    @include navbar-button-style($brand-primary)
 }
 
 #btn-shopping-cart {
-    padding: 5px 10px;
+    padding: 7px 12px;
     margin-right: 20px;
 }
 
@@ -99,10 +84,27 @@
 
 .btn-sm {
     border: none;
-    box-shadow: 1px 1px 2px 0px;
+    box-shadow: 1px 1px 2px 0px $brand-primary;
+    &:focus,
+    &:active,
+    &:focus:active {
+        outline-color: $brand-primary;
+    }
+
 }
 .custom-btn-icon {
     padding-top:15px;
     padding-bottom: 15px;
     min-width: 250px;
+}
+
+
+#form-checkout button[type='submit']{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+#form-advanced-search button {
+    margin-bottom: 20px;
+    margin-top: 20px;
 }

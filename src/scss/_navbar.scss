@@ -1,0 +1,73 @@
+
+.custom-navbar{
+    background:white;
+    border:none;
+    border-bottom:3px solid $brand-primary;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-bottom: 0px;
+}
+
+.navbar-header a > img {
+    position: relative;
+    top : -15px;
+    height: 50px;
+}
+
+.custom-form-control:focus {
+    border-color: $brand-primary;
+    box-shadow:0 0 1px 0 $brand-primary;
+}
+
+.custom-drop-menu {
+    box-shadow: 1px 1px 4px -2px $brand-primary;
+    border-radius: 2px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: darken($brand-primary, 50%);
+    &:hover {
+        color: $brand-primary;
+    }
+
+}
+
+.custom-navbar .navbar-nav .active >a {
+    background-color: transparent;
+    color: $brand-primary;
+    font-weight: bold;
+    border-bottom: 1px solid $brand-primary;
+    &:hover {
+        background: none;
+    }
+}
+
+.custom-drop-menu:hover >li >a {
+    transition-property: background-color, border-color;
+    transition-duration: .5s ;
+}
+
+.custom-drop-menu:hover >li >a:hover,
+.custom-drop-menu:hover >li >a:focus {
+    background-color: lighten($brand-primary,50%);
+    transition-property: background-color, border-color;
+    transition-duration: 0.5s ;
+}
+
+.custom-drop-menu .checkbox {
+    margin: 0 10px;
+}
+
+.custom-drop-menu:active,
+.custom-drop-menu:hover,
+.custom-drop-menu:focus {
+    background-color: white;
+}
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: $brand-primary;
+    background-color: lighten($brand-primary,80%);
+    font-weight: bold;
+}
+
+
